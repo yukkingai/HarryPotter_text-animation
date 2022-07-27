@@ -1,0 +1,203 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    background-color: black;
+    color: white;
+}
+
+.hidden { display: none; }
+
+.animation {
+    width: 1750px;
+    height: 1028px;
+    margin: 0 auto;
+    border: thin solid black;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: url(../images/snape-bg.jpg);
+}
+
+#professor-lesson { position: relative; z-index: 5000; }
+
+#professor-lesson path {
+    opacity: 0;
+}
+
+
+/* #bullets { opacity: 0; } */
+
+.text-fade { animation: fadeWordsIn 0.2s forwards; }
+
+.snape-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 360px;
+    margin-left: 980px;
+    height: 70%;
+    
+
+    /* animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+ */
+}
+
+.animate-snape {
+    animation-name: moveSnape;
+}
+
+
+/* the 'greater than' means a direct descendant of the original container 
+(the element with an id of #firstFive) */
+
+#firstFive > path { opacity: 0; }
+
+.start-button { 
+    position: absolute;  
+    bottom: 50px;
+    left: 800px;
+    width: 150px;
+
+    cursor: pointer;
+
+    z-index: 5001;
+}
+
+
+
+/* keyframe animations go here */
+/* #scarface { animation-duration: 1.5s; animation-delay: 0.5s }
+#kinetic { animation-duration: 2s;  animation-delay: 0.5s }
+#type { animation-duration: 2s; animation-delay: 0.75s }
+#experiment { animation-duration: 2s;  animation-delay: 1s } */
+
+/* text animation synced to audio */
+#which { animation-delay: 0.1s; }
+#one { animation-delay: 0.2s; }
+#of { animation-delay: 0.28s;}
+#you { animation-delay: 0.5s; }
+#can { animation-delay: 1.5s; }
+#tell { animation-delay: 2.7s; }
+#me { animation-delay: 3s; }
+#the { animation-delay: 3.5s; }
+#difference { animation-delay: 3.6s; }
+#between { animation-delay: 4.2s; }
+#an_animagus { animation-delay: 4.2s; }
+#and_a { animation-delay: 4.2s; }
+#werewolf { animation-delay: 4.2s; }
+#NO { animation-delay: 4.2s; }
+#ONE_ { animation-delay: 4.2s; }
+
+
+#Head { animation-delay: 4.2s; }
+#disappointing { animation-delay: 4.2s; }
+#Please_Sir { animation-delay: 4.2s; }
+#thank_you { animation-delay: 4.2s; }
+#Mr._Malfoy { animation-delay: 4.2s; }
+#that_is { animation-delay: 4.2s; }
+#the-2 { animation-delay: 4.2s; }
+#second { animation-delay: 4.2s; }
+#time { animation-delay: 4.2s; }
+#you_ve { animation-delay: 4.2s; }
+#spoken { animation-delay: 4.2s; }
+#out_of_turn { animation-delay: 4.2s; }
+#Miss_Granger { animation-delay: 4.2s; }
+#are { animation-delay: 4.2s; }
+#you-2 { animation-delay: 4.2s; }
+#incapable { animation-delay: 4.2s; }
+#of-2 { animation-delay: 4.2s; }
+#restraining { animation-delay: 4.2s; }
+#yourself { animation-delay: 4.2s; }
+#OR { animation-delay: 4.2s; }
+#do { animation-delay: 4.2s; }
+#you-3 { animation-delay: 4.2s; }
+#take { animation-delay: 4.2s; }
+#pride { animation-delay: 4.2s; }
+#in_being { animation-delay: 4.2s; }
+#an_insufferable { animation-delay: 4.2s; }
+#KNOW-IT-ALL { animation-delay: 4.2s; }
+#five { animation-delay: 4.2s; }
+#points { animation-delay: 4.2s; }
+#from { animation-delay: 4.2s; }
+#Gryffindor { animation-delay: 4.2s; }
+
+
+#recognizing { animation-delay: 4.2s; }
+#is_that { animation-delay: 4.2s; }
+#Sir_ { animation-delay: 4.2s; }
+#it_s { animation-delay: 4.2s; }
+#Quidditch { animation-delay: 4.2s; }
+#tomorrow { animation-delay: 4.2s; }
+#then { animation-delay: 4.2s; }
+#I { animation-delay: 4.2s; }
+#suggeest_you { animation-delay: 4.2s; }
+#take-2 { animation-delay: 4.2s; }
+#extra_care { animation-delay: 4.2s; }
+#Mr._Potter { animation-delay: 4.2s; }
+#loss { animation-delay: 4.2s; }
+#of-3 { animation-delay: 4.2s; }
+#limb { animation-delay: 4.2s; }
+#WILL { animation-delay: 4.2s; }
+#NOT { animation-delay: 4.2s; }
+#excuse { animation-delay: 4.2s; }
+#you-4 { animation-delay: 4.2s; }
+#PAGE { animation-delay: 4.2s; }
+#_394 { animation-delay: 4.2s; }
+
+
+
+.intro-fade {
+    animation-name: fadeElementOut;
+    animation-fill-mode: forwards;
+}
+
+.zoom-snape { animation: zoomSnape 2.5s forwards; }
+
+/* .tony-gun { 
+    position: absolute;
+    z-index: 500;
+    bottom: -60px;
+    right: -50px;
+
+    transform: scale(0.7);
+    animation-delay: 2s;
+
+    opacity: 0;
+} */
+
+/* generic opacity fade */
+@keyframes fadeElementOut {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes moveTony {
+    to { left: -500px; }
+}
+
+@keyframes fadeWordsIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes zoomTony {
+    0% { opacity: 0 }
+    10% { opacity: 1 }
+
+    80% { transform: scale(1.8); opacity: 1; }
+    100% { opacity: 1; transform: scale(1); }
+}
