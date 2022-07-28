@@ -69,14 +69,18 @@ body {
 .start-button { 
     position: absolute;  
     bottom: 50px;
-    left: 800px;
-    width: 150px;
+    left: 850px;
+    width: 300px;
 
     cursor: pointer;
 
     z-index: 5001;
 }
 
+.move-snape {
+    animation-name: moveSnape 2.5s forwards;
+    
+}
 
 
 /* keyframe animations go here */
@@ -165,9 +169,9 @@ body {
     animation-fill-mode: forwards;
 }
 
-.zoom-snape { animation: zoomSnape 2.5s forwards; }
+.zoom-snape { 
+    animation: zoomSnape 2.5s forwards;
 
-/* .tony-gun { 
     position: absolute;
     z-index: 500;
     bottom: -60px;
@@ -177,7 +181,9 @@ body {
     animation-delay: 2s;
 
     opacity: 0;
-} */
+}
+
+
 
 /* generic opacity fade */
 @keyframes fadeElementOut {
@@ -185,8 +191,8 @@ body {
     to { opacity: 0 }
 }
 
-@keyframes moveTony {
-    to { left: -500px; }
+@keyframes moveSnape {
+    to { left: -40px; }
 }
 
 @keyframes fadeWordsIn {
@@ -194,7 +200,7 @@ body {
     100% { opacity: 1; }
 }
 
-@keyframes zoomTony {
+@keyframes zoomSnape {
     0% { opacity: 0 }
     10% { opacity: 1 }
 

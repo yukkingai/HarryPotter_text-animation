@@ -12,7 +12,7 @@
 
         textAnimPaths.forEach(path => path.classList.add('text-fade'));
 
-        snapeImage.classList.add('zoom-snape');
+        snapeImage.classList.add('move-snape');
 
         // hide the play button
         startBut.classList.add('hidden');
@@ -21,11 +21,11 @@
     function setup() {
         // animate the start screen away
         // select the pieces
-        let introPieces = document.querySelectorAll("#intro path"),
-            snapeImg = document.querySelector('.snape-intro');
+        let snapeImg = document.querySelector('.snape-intro'),
+            introPieces = document.querySelectorAll("#intro path");
 
         // add the animation class to make them disappear
-        introPieces.forEach(piece => piece.classList.add('intro-fade'));
+        introPieces.forEach(piece => piece.classList.add('intro path'));
 
         snapeImg.addEventListener('animationend', startTextAnim);
 
@@ -35,4 +35,5 @@
     }
 
     startBut.addEventListener('click', setup);
+
 })();
